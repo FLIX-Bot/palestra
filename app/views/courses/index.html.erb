@@ -6,8 +6,6 @@
   <thead>
     <tr>
       <th>Tipo</th>
-      <th>Descrizione</th>
-      <th>Benefici</th>
       <th>Orari</th>
       <th>Ore</th>
       <th>Partecipanti</th>
@@ -20,14 +18,12 @@
     <% @courses.each do |course| %>
       <tr>
         <td><%= course.tipo %></td>
-        <td><%= course.descrizione %></td>
-        <td><%= course.benefici %></td>
         <td><%= course.orari %></td>
         <td><%= course.ore %></td>
         <td><%= course.partecipanti %></td>
         <td> 
          <% if course.cover.attached? %>
-          <%= image_tag url_for(course.cover), class: 'w-100'%>
+          <%= image_tag url_for(course.cover), class: 'w-50'%>
          <% end %>
         </td>
         <td><%= link_to '📟 Mostra', course, class:"btn btn-outline-dark" %></td>

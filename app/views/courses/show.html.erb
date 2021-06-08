@@ -1,8 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <% if @course.cover.attached? %>
+    <%= image_tag url_for(@course.cover), class:'rounded mx-auto d-block'%>
+    <% end %>
+</p>
+
+<p>
   <strong>Tipo:</strong>
-  <%= @course.tipo %>
+  <%= @course.tipo  %>
 </p>
 
 <p>
@@ -30,11 +36,7 @@
   <%= @course.partecipanti %>
 </p>
 
-<p>
-  <% if @course.cover.attached? %>
-    <%= image_tag url_for(@course.cover)%>
-    <% end %>
-</p>
+
 
 <%= link_to 'Modifica', edit_course_path(@course), class:"btn btn-dark btn-block" %> |
 <%= link_to 'Torna indietro', courses_path, class:"btn btn-dark btn-block" %>
