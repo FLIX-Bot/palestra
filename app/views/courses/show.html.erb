@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @course.tipo %>
+</p>
+
+<p>
+  <strong>Descrizione:</strong>
+  <%= @course.descrizione %>
+</p>
+
+<p>
+  <strong>Benefici:</strong>
+  <%= @course.benefici %>
+</p>
+
+<p>
+  <strong>Orari:</strong>
+  <%= @course.orari %>
+</p>
+
+<p>
+  <strong>Ore:</strong>
+  <%= @course.ore %>
+</p>
+
+<p>
+  <strong>Partecipanti:</strong>
+  <%= @course.partecipanti %>
+</p>
+
+<p>
+  <% if @course.cover.attached? %>
+    <%= image_tag url_for(@course.cover)%>
+    <% end %>
+</p>
+
+<%= link_to 'Modifica', edit_course_path(@course), class:"btn btn-dark btn-block" %> |
+<%= link_to 'Torna indietro', courses_path, class:"btn btn-dark btn-block" %>

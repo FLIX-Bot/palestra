@@ -1,0 +1,52 @@
+<%= form_with(model: course) do |form| %>
+  <% if course.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(course.errors.count, "error") %> prohibited this course from being saved:</h2>
+
+      <ul>
+        <% course.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :tipo %>
+    <%= form.text_field :tipo, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :descrizione %>
+    <%= form.text_field :descrizione, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :benefici %>
+    <%= form.text_field :benefici, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :orari %>
+    <%= form.text_field :orari, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :ore %>
+    <%= form.number_field :ore, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :partecipanti %>
+    <%= form.text_field :partecipanti, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label 'Copertina' %>
+    <%= form.file_field :cover,  class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+  <%= form.submit 'Crea corso', class:"btn btn-dark btn-block" %>
+  </div>
+<% end %>

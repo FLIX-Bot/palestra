@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cognome:</strong>
+  <%= @subscribe.cognome %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @subscribe.nome %>
+</p>
+
+<p>
+  <strong>Indirizzo:</strong>
+  <%= @subscribe.indirizzo %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @subscribe.email %>
+</p>
+
+<p>
+  <strong>Cellulare:</strong>
+  <%= @subscribe.cellulare %>
+</p>
+
+<%= link_to 'Modifica', edit_subscribe_path(@subscribe), class:"btn btn-dark btn-block" %> |
+<%= link_to 'Torna indietro', subscribes_path, class:"btn btn-dark btn-block" %>

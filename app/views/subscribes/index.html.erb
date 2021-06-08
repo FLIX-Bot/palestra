@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Iscriviti a GymFit</h1>
+
+<table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th>Cognome</th>
+      <th>Nome</th>
+      <th>Indirizzo</th>
+      <th>Email</th>
+      <th>Cellulare</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subscribes.each do |subscribe| %>
+      <tr>
+        <td><%= subscribe.cognome %></td>
+        <td><%= subscribe.nome %></td>
+        <td><%= subscribe.indirizzo %></td>
+        <td><%= subscribe.email %></td>
+        <td><%= subscribe.cellulare %></td>
+        <td><%= link_to '📟 Mostra', subscribe, class:"btn btn-outline-dark" %></td>
+        <td><%= link_to '✏️ Modifica', edit_subscribe_path(subscribe), class:"btn btn-outline-dark" %></td>
+        <td><%= link_to '❌ Elimina', subscribe, method: :delete, data: { confirm: '✔️  Sei sicuro di voler eliminare l&#39iscrizione?  ❌' }, class:"btn btn-outline-dark" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Iscriviti', new_subscribe_path,  class:"btn btn-dark btn-block" %>
