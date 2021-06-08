@@ -1,6 +1,6 @@
 class SubscribesController < ApplicationController
-  before_action :authenticate_user!
-  before_action :set_subscribe, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, only: %i[ new show edit update destroy ]
+  before_action :set_course, only: %i[ new show edit update destroy ]
 
   # GET /subscribes or /subscribes.json
   def index

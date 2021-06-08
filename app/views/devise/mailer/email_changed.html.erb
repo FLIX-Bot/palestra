@@ -1,0 +1,7 @@
+<p>Buongiorno <%= @email %>!</p>
+
+<% if @resource.try(:unconfirmed_email?) %>
+  <p>La stiamo avvisando che la password del profilo GymFit è stata cambiata <%= @resource.unconfirmed_email %>.</p>
+<% else %>
+  <p>La stiamo avvisando che la password del profilo GymFit è stata cambiata a <%= @resource.email %>.</p>
+<% end %>
