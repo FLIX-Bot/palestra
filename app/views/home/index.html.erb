@@ -1,17 +1,17 @@
-<% if user_signed_in? %>
-    Benvenuto <b><%= current_user.email %></b>!
-    <br><%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-  <% end %> 
+
 
 
     <link rel="stylesheet" href="index.css">
-      
+    <br><% if user_signed_in? %>
+    Benvenuto <b><%= current_user.email %></b>!
+    <br><%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+  <% end %> <br>  
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img class="d-block w-100" src="https://calisthenicsmilano.com/wp-content/uploads/2021/04/bloheader_blog.jpg" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
-            <h5>1</h5>
+            <h2>Grazie agli allenamenti</h2>
             </div>
         </div>
         <div class="carousel-item">
@@ -23,7 +23,7 @@
         <div class="carousel-item">
             <img class="d-block w-100" src="https://calisthenicsmilano.com/wp-content/uploads/2020/10/calisthenics_milano_principianti.jpg" alt="Third slide">
             <div class="carousel-caption d-none d-md-block">
-            <h5>3</h5>
+            <h2>Spazi larghi rispettando le normative</h2>
             </div>
         </div>
     </div>
@@ -51,6 +51,7 @@
                 <img class="card-img-top" src="https://www.hilifesportfitness.it/wp-content/uploads/32395-410x200.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Alternativa sportiva</h5>
+                        <p>Il corso di Aerotonic prevede un programma di condizionamento muscolare e cardio-vascolare con esercizi strutturati mediante cambi di intensità abbinati ad accompagnamento musicale ritmato.</p>
                         <p class="card-text"><small class="text-muted">Ultimo aggiornamento: 08/06/2021</small></p>
                     </div>
             </div>
@@ -58,6 +59,7 @@
                 <img class="card-img-top" src="https://www.hilifesportfitness.it/wp-content/uploads/2017/08/corso-hilife-amakafit-410x200.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Amaka Fit</h5>
+                        <p>Si tratta di un training studiato ad hoc per lavorare su tutte le capacità motorie fondamentali nella crescita, come forza, velocità, resistenza e coordinazione, ovvero un allenamento a 360°, tramite attività dinamiche e progressive.</p>
                         <p class="card-text"><small class="text-muted">Ultimo aggiornamento: 08/06/2021</small></p>
                     </div>
             </div>
@@ -65,6 +67,7 @@
                 <img class="card-img-top" src="https://www.hilifesportfitness.it/wp-content/uploads/2017/08/attivita%CC%80-fisica-adattata-410x200.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Attività fisica adattata(A.F.A.)</h5>
+                        <p>Se quello che si cerca è un corso diverso, innovativo e curioso, iniziare Amaka Fit è l’ideale perché con questo allenamento alleni i muscoli e perdi peso mentre sei in aria. Amaka Fit è una tipologia di allenamento che utilizza un tessuto appeso come unico strumento per esercitarsi.</p>
                         <p class="card-text"><small class="text-muted">Ultimo aggiornamento: 08/06/2021</small></p>
                     </div>
                 </div>
